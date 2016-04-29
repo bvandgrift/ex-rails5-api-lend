@@ -9,20 +9,19 @@ and update title and author information.
 ## Purpose
 
 This codebase exemplifies the implementation of most components of an
-API using Rails and Grape. It can be used as an educational tool, a
-reference, or the basis for beginning a new project or building a Rails
-template.
+API using Rails5 and rails-api (baked into Rails 5). It can be used 
+as an educational tool, a reference, or the basis for beginning a new 
+project or building a Rails template.
 
 ## Rationale
 
-Note, we're speaking mainly about Rails 4.x here.
+Note, we're speaking mainly about Rails 5 here.
 
 _WHY RAILS?_ In many applications, there is some crossover between
 the web application and the api. The basic rails setup is comfortable
-and easily extended. Configuration is well-understood. In short, Rails
-provides a set of environmental features that will facilitate development,
-even if (as in this case), we aren't using controllers at all, and are
-simply mounting rack apps using `config/routes.rb`.
+and easily extended. Configuration is well-understood. The new api-only
+features included in Rails 5 allow for simple API creation within the
+usual Rails idiom.
 
 In addition, many of the most common features in an API (authn/z, search,
 etc.) can be found in well-established rubygems we can include. As a base,
@@ -32,15 +31,6 @@ Finally, Rails has a templating system we may be able to employ to
 create an API in a very short time, by including everything we need
 without setup. It is our hope that this humble example will form the
 blueprint for such a template.
-
-_WHY GRAPE?_ Grape contains all of the most critical features for API
-construction, without a lot of the fluff. The HTTP method and parameters
-are front and center. It's simple. It's fast. It's most of the things
-you want out of an API.
-
-Rails' methodology is one of web applications; while it's not late to
-the API party, it's routing and controller structure hasn't been streamlined
-to the same degree.
 
 ## Features
 
@@ -62,7 +52,7 @@ The application will:
 * use secure practices
 * have baked-in deployment considerations
 * be self-documenting
-* include rational for architectural decisions
+* include rationale for architectural decisions
 * be continuously integrated and delivered
 
 ## Getting Started
